@@ -7,16 +7,33 @@
 //
 
 #import "AppDelegate.h"
-
+#import "BasicHeader.h"
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
-
+static NSString * const IS_FIRST_START = @"isFirstStart";
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    
+    //判断是不是第一次进入
+    if (![[NSUserDefaults standardUserDefaults]valueForKey:IS_FIRST_START]) {
+        [[NSUserDefaults standardUserDefaults]setValue:@(NO) forKey:IS_FIRST_START];
+        [[NSUserDefaults standardUserDefaults]synchronize];
+        IntroduceViewController * introduce = [[IntroduceViewController alloc]init];
+        PLNavigationViewController * navigation = [[PLNavigationViewController alloc]initWithRootViewController:introduce];
+        self.window.rootViewController = navigation;
+    }
+    else{
+        BaseViewController * base = [[BaseViewController alloc] init];
+        PLNavigationViewController * navigation = [[PLNavigationViewController alloc]initWithRootViewController:base];
+        self.window.rootViewController = navigation;
+        
+    }
+    
     return YES;
 }
 
