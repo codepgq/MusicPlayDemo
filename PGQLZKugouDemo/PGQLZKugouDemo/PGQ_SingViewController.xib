@@ -14,7 +14,33 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1g6-3j-8rE">
+                    <rect key="frame" x="0.0" y="64" width="600" height="486"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Luj-15-YQe">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="128"/>
+                            <color key="backgroundColor" red="0.83934789896011353" green="0.96557635068893433" blue="0.1872173547744751" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </scrollView>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o7y-yp-myR">
+                            <rect key="frame" x="0.0" y="126" width="600" height="302"/>
+                            <color key="backgroundColor" red="0.79215985536575317" green="0.61821150779724121" blue="0.10670433193445206" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UVJ-gm-DvW">
+                            <rect key="frame" x="0.0" y="427" width="600" height="59"/>
+                            <color key="backgroundColor" red="0.47403985261917114" green="0.25279158353805542" blue="0.083797328174114227" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
+                    </subviews>
+                </scrollView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="1g6-3j-8rE" secondAttribute="trailing" id="GRZ-bc-Rc8"/>
+                <constraint firstAttribute="bottom" secondItem="1g6-3j-8rE" secondAttribute="bottom" constant="50" id="P1k-BC-1Za"/>
+                <constraint firstItem="1g6-3j-8rE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dGL-RO-Sxj"/>
+                <constraint firstItem="1g6-3j-8rE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="plh-MC-c2K"/>
+            </constraints>
+            <point key="canvasLocation" x="310" y="396"/>
         </view>
     </objects>
 </document>

@@ -77,8 +77,7 @@
     [self.view addSubview:self.topView];
     
     
-    UIViewController * controller1 = [[UIViewController alloc] init];
-    controller1.view.backgroundColor = [UIColor blueColor];
+    PGQ_SingViewController * controller1 = [[PGQ_SingViewController alloc] initWithNibName:@"PGQ_SingViewController" bundle:nil];
     
     UIViewController * controller2 = [[UIViewController alloc] init];
     controller2.view.backgroundColor = [UIColor greenColor];
@@ -86,7 +85,7 @@
     UIViewController * controller3 = [[UIViewController alloc] init];
     controller3.view.backgroundColor = [UIColor redColor];
     
-    self.centerView = [PGQ_BaseCenterView pgq_baseConterViewWithVCS:@[controller1,controller2,controller3] PageBlock:^(NSInteger pageIndex) {
+    self.centerView = [PGQ_BaseCenterView pgq_baseConterViewWithVCS:@[controller1,controller1,controller2] PageBlock:^(NSInteger pageIndex) {
         NSLog(@"scroll - pageindex %ld",pageIndex);
         [self.baseVM.scrollCommand execute:@(pageIndex)];
     }];

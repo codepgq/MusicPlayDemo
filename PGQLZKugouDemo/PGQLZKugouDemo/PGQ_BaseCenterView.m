@@ -52,20 +52,36 @@
 }
 
 - (void)addViewsForScrollView{
-    for (NSInteger i = 0; i < self.viewControllers.count; i++) {
-        UIViewController * viewController = (UIViewController*)self.viewControllers[i];
-        viewController.view.x = i * self.scrollView.width;
-        [self.scrollView addSubview:viewController.view];
-    }
+    int x = 0;
+////    for (int i = 0; i < self.viewControllers.count; i++) {
+////        x = i;
+////        BaseViewController * viewController = self.viewControllers[i];
+////        viewController.view.x = x * PL_SRCEEN_WIDTH;
+////        [self.scrollView addSubview:[viewController view]];
+////    }
+//    for (BaseViewController * base in self.viewControllers) {
+//        x++;
+////        base.view.x = x * PL_SRCEEN_WIDTH;
+//        [self.scrollView addSubview:base.view];
+//    }
+    
+    id vc1 = self.viewControllers[x];
+    [[vc1 view] setX:x*PL_SRCEEN_WIDTH];
+    [self.scrollView addSubview:[vc1 view]];
+    x++;
+    id vc2 = self.viewControllers[x];
+    [[vc1 view] setX:x*PL_SRCEEN_WIDTH];
+    [self.scrollView addSubview:[vc2 view]];
+    x++;
+    id vc3 = self.viewControllers[x];
+    [[vc1 view] setX:x*PL_SRCEEN_WIDTH];
+    [self.scrollView addSubview:[vc3 view]];
+    
     self.scrollView.contentSize = CGSizeMake(self.viewControllers.count * self.scrollView.width, 0);
     [self addSubview:self.scrollView];
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-//    if (_pageIndex == _lastPageIndex) {
-//        return;
-//    }
-//    _lastPageIndex = _pageIndex;
     self.pageIndexBlock(_pageIndex);
 }
 

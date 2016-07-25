@@ -43,9 +43,7 @@
     [self addSubview:view1];
     for (NSInteger i = 1; i < 5; i++) {
         UIView * view = [[UIView alloc]initWithFrame:CGRectMake(i * (self.width/5), 0, self.width/5, self.height*0.8)];
-        if (i == 0 ) {
-            
-        }else if (i == 4){
+        if (i == 4){
             UIButton *btn = [self buttonWithTag:i imageName:@"colorring_search"];
             [view addSubview:btn];
         }else{
@@ -77,18 +75,18 @@
         self.clickBlock(btn,btn.tag);
     }];
     
-    [RACObserve(btn, selected) subscribeNext:^(id x) {
-        if ([x boolValue] == YES) {
-            [UIView animateWithDuration:0.25f animations:^{
-                btn.transform = CGAffineTransformMakeScale(1.2, 1.2);
-            }];
-        }
-        else{
-            [UIView animateWithDuration:0.25f animations:^{
-                btn.transform = CGAffineTransformIdentity;
-            }];
-        }
-    }];
+//    [RACObserve(btn, selected) subscribeNext:^(id x) {
+//        if ([x boolValue] == YES) {
+//            [UIView animateWithDuration:0.25f animations:^{
+//                btn.transform = CGAffineTransformMakeScale(1.2, 1.2);
+//            }];
+//        }
+//        else{
+//            [UIView animateWithDuration:0.25f animations:^{
+//                btn.transform = CGAffineTransformIdentity;
+//            }];
+//        }
+//    }];
     return btn;
 }
 
@@ -102,18 +100,6 @@
     [[btn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
         @strongify(self);
         self.clickBlock(btn,btn.tag);
-    }];
-    [RACObserve(btn, selected) subscribeNext:^(id x) {
-        if ([x boolValue] == YES) {
-            [UIView animateWithDuration:0.25f animations:^{
-                btn.transform = CGAffineTransformMakeScale(1.2, 1.2);
-            }];
-        }
-        else{
-            [UIView animateWithDuration:0.25f animations:^{
-                btn.transform = CGAffineTransformIdentity;
-            }];
-        }
     }];
     return btn;
 }

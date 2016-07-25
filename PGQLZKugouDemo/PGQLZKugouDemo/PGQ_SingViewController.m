@@ -7,7 +7,7 @@
 //
 
 #import "PGQ_SingViewController.h"
-
+#import "BasicHeader.h"
 @interface PGQ_SingViewController ()
 
 @end
