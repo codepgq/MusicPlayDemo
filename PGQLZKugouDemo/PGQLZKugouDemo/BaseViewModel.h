@@ -11,6 +11,12 @@
 @class RACCommand;
 @interface BaseViewModel : UIView
 
+/**
+ *  用户scrollView联动
+ */
 @property (nonatomic,strong) PGQ_ScrollModel * scrollModel;
+/**
+ *  处理ScrollView滑动和点击滑到相应的页面
+ */
 @property (nonatomic,strong) RACCommand * scrollCommand;
 @end

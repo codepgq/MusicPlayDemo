@@ -18,7 +18,7 @@ typedef void(^PGQ_BaseCenterViewPageIndexBlock)(NSInteger pageIndex);
  */
 + (instancetype)pgq_baseConterViewWithVCS:(NSArray *)vcs PageBlock:(PGQ_BaseCenterViewPageIndexBlock)pageIndexBlock;
 /**
- *  更新
+ *  更新到指定的offset
  *
  *  @param offset
  */

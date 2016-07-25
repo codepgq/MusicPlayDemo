@@ -14,6 +14,7 @@
 #import "UIControl+PQControlExtension.h"
 #import "UIImage+pgqImageExtension.h"
 #import "IntroduceViewController.h"
+#import "PGQ_SingViewController.h"
 
 //navigationController
 #import "PLNavigationViewController.h"

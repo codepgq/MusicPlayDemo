@@ -47,12 +47,14 @@
     [self initUI];
     [self addSubViewToScrollView];
     
+    // RAC监听按钮点击事件
     [[_joinButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
         [self.navigationController pushViewController:[BaseViewController new] animated:YES];
     }];
     
 }
 
+//为Scrollview添加图片
 - (void)addSubViewToScrollView{
     for (NSInteger i = 0; i < self.imgs.count; i++) {
         UIImageView * imgView = [[UIImageView alloc]initWithFrame:CGRectMake(i * self.scrollView.width, 0, self.scrollView.width, self.scrollView.height)];
@@ -81,18 +83,24 @@
     [self.view addSubview:self.joinButton];
 }
 
-- (IBAction)pushMainControllerClick:(UIButton *)sender {
-    [self.navigationController pushViewController:[[BaseViewController alloc] init] animated:YES];
-}
 
+/**
+ *  处理立即进入什么时候显示
+ *
+ *  @param scrollView
+ */
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     CGFloat pageWidth = scrollView.frame.size.width;
     int currentPage = floor((scrollView.contentOffset.x - pageWidth/ 2) / pageWidth)+ 1;
-    NSLog(@"%d",currentPage);
+    __weak typeof(self) weakSelf = self;
     if (currentPage == 2) {
-        __weak typeof(self) weakSelf = self;
         [UIView animateWithDuration:0.25 animations:^{
             weakSelf.joinButton.hidden = NO;
+        }];
+    }
+    else{
+        [UIView animateWithDuration:0.25 animations:^{
+            weakSelf.joinButton.hidden = YES;
         }];
     }
 }

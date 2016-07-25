@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface PGQ_ScrollModel : NSObject
-
+//保存scrollview滑动的页码
 @property (nonatomic,assign) float scrollPosition;
 
 @end

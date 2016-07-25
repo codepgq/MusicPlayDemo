@@ -10,16 +10,27 @@
 #import "BasicHeader.h"
 #import "BaseHeader.h"
 @interface BaseViewController ()
-
+/**
+ *  顶部view
+ */
 @property (nonatomic,strong) PGQ_BaseTopView *topView;
+/**
+ *  底部view
+ */
 @property (nonatomic,strong) PGQ_BaseBottomView *bottomView;
+/**
+ *  中间view
+ */
 @property (nonatomic,strong) PGQ_BaseCenterView *centerView;
+/**
+ *  ViewModel
+ */
 @property (nonatomic,strong) BaseViewModel * baseVM;
 
 @end
 
 @implementation BaseViewController
-
+//懒方法 lazy method
 - (BaseViewModel *)baseVM{
     if (!_baseVM) {
         _baseVM = [[BaseViewModel alloc]init];
@@ -48,12 +59,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor orangeColor];
-    
+    //初始化UI
     [self initUI];
+    //处理事件
     [self event];
 }
 
 - (void)event{
+    //不管是谁发送了消息都相应的的更新
     [self.baseVM.scrollCommand.executionSignals.switchToLatest subscribeNext:^(id x) {
         [self.topView updateUserSelectedWithIndex:[x integerValue]];
         [self.centerView updateScrollViewContentOffSetWith:[x integerValue]];

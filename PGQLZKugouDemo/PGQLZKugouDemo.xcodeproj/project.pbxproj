@@ -27,6 +27,8 @@
 		81F5F0571D45A81D00A65198 /* PGQ_BaseBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F5F0561D45A81D00A65198 /* PGQ_BaseBottomView.m */; };
 		81F5F05B1D45A88A00A65198 /* PGQ_BaseCenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F5F05A1D45A88A00A65198 /* PGQ_BaseCenterView.m */; };
 		81F5F05F1D45C06500A65198 /* PGQ_BaseBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81F5F05E1D45C06500A65198 /* PGQ_BaseBottomView.xib */; };
+		81F5F0631D4602CE00A65198 /* PGQ_SingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F5F0611D4602CE00A65198 /* PGQ_SingViewController.m */; };
+		81F5F0641D4602CE00A65198 /* PGQ_SingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81F5F0621D4602CE00A65198 /* PGQ_SingViewController.xib */; };
 		D6425782056D8E7FB49D4AB7 /* libPods-PGQLZKugouDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 753492DADBD2BCAE33AA963E /* libPods-PGQLZKugouDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +92,9 @@
 		81F5F05A1D45A88A00A65198 /* PGQ_BaseCenterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGQ_BaseCenterView.m; sourceTree = "<group>"; };
 		81F5F05D1D45B0FA00A65198 /* BaseHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseHeader.h; sourceTree = "<group>"; };
 		81F5F05E1D45C06500A65198 /* PGQ_BaseBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PGQ_BaseBottomView.xib; sourceTree = "<group>"; };
+		81F5F0601D4602CE00A65198 /* PGQ_SingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGQ_SingViewController.h; sourceTree = "<group>"; };
+		81F5F0611D4602CE00A65198 /* PGQ_SingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGQ_SingViewController.m; sourceTree = "<group>"; };
+		81F5F0621D4602CE00A65198 /* PGQ_SingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PGQ_SingViewController.xib; sourceTree = "<group>"; };
 		F48CAF81A18C9FBBD374F1F9 /* Pods-PGQLZKugouDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PGQLZKugouDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-PGQLZKugouDemo/Pods-PGQLZKugouDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -254,6 +259,9 @@
 		81F5F02D1D45A1F600A65198 /* 唱 */ = {
 			isa = PBXGroup;
 			children = (
+				81F5F0601D4602CE00A65198 /* PGQ_SingViewController.h */,
+				81F5F0611D4602CE00A65198 /* PGQ_SingViewController.m */,
+				81F5F0621D4602CE00A65198 /* PGQ_SingViewController.xib */,
 			);
 			name = "唱";
 			sourceTree = "<group>";
@@ -476,6 +484,7 @@
 			files = (
 				818545AA1D42231500FFA8B2 /* LaunchScreen.storyboard in Resources */,
 				81F5F05F1D45C06500A65198 /* PGQ_BaseBottomView.xib in Resources */,
+				81F5F0641D4602CE00A65198 /* PGQ_SingViewController.xib in Resources */,
 				818545A71D42231500FFA8B2 /* Assets.xcassets in Resources */,
 				818545A51D42231500FFA8B2 /* Main.storyboard in Resources */,
 				81F5F0461D45A36600A65198 /* IntroducePlist.plist in Resources */,
@@ -551,6 +560,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81F5F0631D4602CE00A65198 /* PGQ_SingViewController.m in Sources */,
 				81F5F0421D45A29A00A65198 /* UIView+pgqViewExtension.m in Sources */,
 				81F5F0401D45A29A00A65198 /* UIControl+PQControlExtension.m in Sources */,
 				81F5F05B1D45A88A00A65198 /* PGQ_BaseCenterView.m in Sources */,

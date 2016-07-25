@@ -24,7 +24,11 @@
 }
 
 - (void)setScrollTurnToPage{
+    /**
+     创建一个事件
+     */
     self.scrollCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
+        //返回一个信号
         return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
             [subscriber sendNext:input];
             [subscriber sendCompleted];

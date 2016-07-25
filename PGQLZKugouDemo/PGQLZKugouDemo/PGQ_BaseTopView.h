@@ -33,6 +33,10 @@ typedef void(^PGQ_BaseTopViewClickBlock)(UIButton * button ,NSInteger tag);
  *  @param imageNamed 
  */
 - (void)updateUserIconWithImageNamed:(NSString *)imageNamed;
-
+/**
+ *  更新按钮是不是选中
+ *
+ *  @param index 
+ */
 - (void)updateUserSelectedWithIndex:(NSInteger)index;
 @end
