@@ -85,7 +85,7 @@
     UIViewController * controller3 = [[UIViewController alloc] init];
     controller3.view.backgroundColor = [UIColor redColor];
     
-    self.centerView = [PGQ_BaseCenterView pgq_baseConterViewWithVCS:@[controller1,controller1,controller2] PageBlock:^(NSInteger pageIndex) {
+    self.centerView = [PGQ_BaseCenterView pgq_baseConterViewWithVCS:@[controller1.view,controller2.view,controller3.view] PageBlock:^(NSInteger pageIndex) {
         NSLog(@"scroll - pageindex %ld",pageIndex);
         [self.baseVM.scrollCommand execute:@(pageIndex)];
     }];

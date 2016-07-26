@@ -6,8 +6,8 @@
 //  Copyright © 2016年 PL. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface PGQ_SingViewController : BaseViewController
+@interface PGQ_SingViewController : UIViewController
 
 @end
