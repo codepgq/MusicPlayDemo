@@ -1,2 +1,2 @@
 # MusicPlayDemo
-try do it
+try to do it
